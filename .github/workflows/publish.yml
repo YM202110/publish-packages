@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    # Add my test steps here
+    # Add my test steps
     - name: Build container
       uses: docker/build-push-action@v1
       with:
