@@ -1,0 +1,21 @@
+name: Publish to Docker
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    # Add my test steps here
+    - name: Build container
+      uses: docker/build-push-action@v1
+      with:
+        username: YM202110
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: YM202110/publish-packages/game
+        tag_with_sha: true
