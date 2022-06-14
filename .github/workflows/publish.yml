@@ -17,5 +17,5 @@ jobs:
         username: YM202110
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
-        repository: YM202110/publish-packages/game
+        repository: ym202110/publish-packages/game
         tag_with_sha: true
